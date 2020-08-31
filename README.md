@@ -110,9 +110,8 @@ A l'inverse, les modèle avec un biais élevée sont en sousapprentissage, et pe
 
 Une fois qu'on a trouvé le juste milieu l'algorithme est généralisable, il peut effectuer les prédictions les plus performantes possibles avec le moins de données possibles. 
 
-Compromis entre biais et variance | erreur test vs entrainement|
-:--------------------------------:|:--------------------------:
-![biais_variance](./.github/biais_variance.PNG)
-![test_vs_train](./.github/training_vs_test_error.PNG)
+Compromis entre biais et variance | erreur test vs entrainement |
+:--------------------------------:|:----------------------------:
+![biais_variance](./.github/biais_variance.PNG) | ![test_vs_train](./.github/training_vs_test_error.PNG)
 
 
