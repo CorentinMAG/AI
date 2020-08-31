@@ -23,7 +23,7 @@ Il faut utiliser le jeu de données (dataset) à notre disposition à bon escien
 Une bonne pratique est de séparer notre dataset en 3 paquets:
 * le dataset d'entrainement, qui sera uniquement utilisé pour entrainer l'algorithme (il faut s'assurer que l'échantillon soit bien représentatif de toutes les données, pour ça généralement on récupère aléatoirement des échantillons dans notre jeu de données)
 * le dataset de test, qui servira à mesurer l'erreur (et donc la performance) du modèle sur des données qu'il n'a jamais vues. L'algorithme ne sera donc pas entrainé avec ces données.
-* le dataset de validation, qui servira à valider ou non notre modèle en mesurant l'erreur de prédiction
+* le dataset de validation, qui servira à valider ou non notre modèle en mesurant l'erreur de prédiction (lors d'une validation croisée)
 
 > :information_source: En général, on sépare les données suivant la proportion 80:20
 
@@ -115,7 +115,7 @@ La régularisation est une technique visant à limiter le surapprentissage. On i
 
 Une fois qu'on a trouvé le juste milieu l'algorithme est généralisable, il peut effectuer les prédictions les plus performantes possibles avec le moins de données possibles. 
 
-Compromis entre biais et variance | erreur test vs entrainement | surapprentssage vs sousapprentissage |
+Compromis entre biais et variance | erreur test vs entrainement | surapprentissage vs sousapprentissage |
 :--------------------------------:|:---------------------------:|:------------------------------------:
 ![biais_variance](./.github/biais_variance.PNG) | ![test_vs_train](./.github/training_vs_test_error.PNG) | ![overlifting_underlifting](./.github/overlifting_underlifting.PNG)
 
@@ -124,6 +124,26 @@ Compromis entre biais et variance | erreur test vs entrainement | surapprentssag
 Pour un nombre de paramètre donné, plus la dimension de l'espace augmente et plus il faudra de données d'entrainement pour notre modèle. C'est ce qu'on appele le phénomène de curse of dimensionality qui se visualise très bien avec l'alorithme KNN.
 
 Notre modèle doit donc être assez contraint pour pouvoir supporter les variations dimensionnelles sans augmenter en complexité.
+
+
+## Evaluer les performances d'un modèle
+
+On a vu qu'il fallait couper notre jeu de données en au moins deux parties : 
+* un dataset pour l'entrainement
+* un dataset pour le test
+
+Il ne faut jamais évaluer un modèle sur des points qui ont été utilisés pour l'entrainer.
+
+Cependant, on utilise du coup qu'une partie de nos données pour entrainer l'algorithme, si le dataset de test est très facile/dificile à prédire, l'estimation de la performance sera biaisé.
+
+A la fin d'éviter ce problème, on utilise la validation croisée, qui va permettre d'utiliser l'intégralité de notre jeu de données pour l'entrainement et pour la validation.
+
+Le principe consiste à découper le jeu de données en k parties (fold) à peu près égales. Tour à tour, chacune des k parties (souvent 5 ou 10) est utilisé comme un dataset de test. Le reste (les k-1 parties) est utilisé pour l'entrainement.
+
+A la fin, chaque donnée a servit 1 fois dans le dataset de test et k-1 fois dans le dataset d'entrainement.  
+
+La stratification consiste à faire des folds les plus variés possibles, afin que chaque fold puisse contenir un maximimum d'informations différentes.
+
 
 
 
