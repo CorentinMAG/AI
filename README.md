@@ -98,7 +98,7 @@ Dans le cas de KNN, augmenter drastiquement k rend le modèle plus simple, et do
 
 Il faut trouver un bon compromis entre variance forte et biais élevé (bias-variance tradeoff)
 
-1. réduire le nombre de dimensions du modèle (simplifie le modèle et donc diminue la variance)
+1. réduire le nombre de dimensions du modèle (simplifie le modèle et donc diminue la variance ex: PCA,Isomap)
 2. utiliser des méthodes ensemblistes (il existe toute une famille d'algorithme appelés les méthodes d'ensembles qui se basent sur la combinaison de plusieurs modèles à haute variance et les agrègent (p. ex. en les moyennant) pour réduire la variance finale)
 3. Sélectionner et entrainer le bon modèle
 
@@ -108,10 +108,22 @@ Le surapprentissage désigne le fais que le modèle choisi est trop collé au da
 
 A l'inverse, les modèle avec un biais élevée sont en sousapprentissage, et peuvent rater des informations importantes.
 
+La régularisation est une technique visant à limiter le surapprentissage. On impose au modèle des contraintes, afin de le simplifier.
+1. régularisation dropout, les poids des coefficients sont remplacés par 0 de manière aléatoire
+2. régularisation euclidienne, on favorise les coefficients faibles
+3. early stopping, l'apprentissage s'arrête plus tôt
+
 Une fois qu'on a trouvé le juste milieu l'algorithme est généralisable, il peut effectuer les prédictions les plus performantes possibles avec le moins de données possibles. 
 
-Compromis entre biais et variance | erreur test vs entrainement |
-:--------------------------------:|:----------------------------:
-![biais_variance](./.github/biais_variance.PNG) | ![test_vs_train](./.github/training_vs_test_error.PNG)
+Compromis entre biais et variance | erreur test vs entrainement | surapprentssage vs sousapprentissage |
+:--------------------------------:|:---------------------------:|:------------------------------------:
+![biais_variance](./.github/biais_variance.PNG) | ![test_vs_train](./.github/training_vs_test_error.PNG) | ![overlifting_underlifting](./.github/overlifting_underlifting.PNG)
+
+## Problème de dimension
+
+Pour un nombre de paramètre donné, plus la dimension de l'espace augmente et plus il faudra de données d'entrainement pour notre modèle. C'est ce qu'on appele le phénomène de curse of dimensionality qui se visualise très bien avec l'alorithme KNN.
+
+Notre modèle doit donc être assez contraint pour pouvoir supporter les variations dimensionnelles sans augmenter en complexité.
+
 
 
