@@ -110,6 +110,8 @@ A l'inverse, les modèle avec un biais élevée sont en sousapprentissage, et pe
 
 Une fois qu'on a trouvé le juste milieu l'algorithme est généralisable, il peut effectuer les prédictions les plus performantes possibles avec le moins de données possibles. 
 
+![biais_variance](./.github/biais_variance.PNG)
+
 
 
 
