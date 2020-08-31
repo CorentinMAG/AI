@@ -89,5 +89,27 @@ k est ce qu'on appelle un hyperparamètre, c'est à dire que ce n'est pas un par
 
 [Plus d'information](https://cache.media.eduscol.education.fr/file/NSI/76/6/RA_Lycee_G_NSI_algo_knn_1170766.pdf)
 
+## Compromis entre biais et variance
+
+Un modèle est très dépendant du dataset d'entrainement. On le voit très bien avec l'algorithme KNN avec k = 1: l'algorithme sera parfait pour les données d'entrainement mais beaucoup moins pour les données de test!  
+Comme on ne veut pas de cette variabilité, on va faire en sorte que la variabilité vis à vis du dataset d'entrainement diminue. Pour ça, dans le cas de KNN, on va augmenter k.  
+Cependant, augmenter k vas créer un autre type d'erreur, appelé biais. Le biais est lié à la complexité du modèle: Plus celui ci est complexe et plus le biais diminue.
+Dans le cas de KNN, augmenter drastiquement k rend le modèle plus simple, et donc le biais est élevé. Un modèle trop simple ne parvient pas à capturer toute la complexité du problème.
+
+Il faut trouver un bon compromis entre variance forte et biais élevé (bias-variance tradeoff)
+
+1. réduire le nombre de dimensions du modèle (simplifie le modèle et donc diminue la variance)
+2. utiliser des méthodes ensemblistes (il existe toute une famille d'algorithme appelés les méthodes d'ensembles qui se basent sur la combinaison de plusieurs modèles à haute variance et les agrègent (p. ex. en les moyennant) pour réduire la variance finale)
+3. Sélectionner et entrainer le bon modèle
+
+## surapprentissage et sousapprentissage
+
+Le surapprentissage désigne le fais que le modèle choisi est trop collé au dataset d'apprentissage. C'est un problème qui survient quand la complexité du modèle est trop élevée, et il prend en compte du "bruit" non représentatif du modèle sous-jacent. C'est ce qui arrive aux modèles avec une haute variance.
+
+A l'inverse, les modèle avec un biais élevée sont en sousapprentissage, et peuvent rater des informations importantes.
+
+Une fois qu'on a trouvé le juste milieu l'algorithme est généralisable, il peut effectuer les prédictions les plus performantes possibles avec le moins de données possibles. 
+
+
 
 
