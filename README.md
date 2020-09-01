@@ -113,14 +113,13 @@ La fonction de coût est convexe, elle admet donc un minimum.
 :----------------------------------:|:----------------------------------------:
 alpha est le learning rate          | la fonction de coût dépend en réalité de plusieurs paramètres (ici a et b) ce qui donne l'image ci dessus vu de en haut
 
-![gradient](./.github/algo_grad.PNG)
+<img src='./.github/algo_grad.PNG' alt='gradient' width=400/>
 
 alpha est choisit aléatoirement, il faut faire attention de: 
 * ne pas en choisir un trop grand (sinon oscillation et on ne pourra jamais atteindre le minimum)
 * ne pas en choisir un trop petit (sinon temps infini)
 
-![gradient](./.github/summary_grad.PNG)
-
+<img src='./.github/summary_grad.PNG' alt='gradient' width=400/>
 
 ### Compromis entre biais et variance
 
