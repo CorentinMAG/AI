@@ -42,7 +42,6 @@ L'idée consiste donc à associer un label à des données sur lesquelles on a d
 * si les labels sont continus on parle de regression
 
 Les étapes :
-
 1.dataset (y:target, x:features)
 2.modèle (régression linéaire,logistique...)
 3.fonction de coût (l'erreur quadratique moyenne)
