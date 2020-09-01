@@ -106,6 +106,11 @@ La fonction de coût est convexe, elle admet donc un minimum.
 :----------------------------------:|:----------------------------------------:
 alpha est le learning rate          | la fonction de coût dépend en réalité de plusieurs paramètres (ici a et b) ce qui donne l'image ci dessus vu de en haut
 
+![gradient](./.github/algo_grad.PNG) | 
+:----------------------------------:|
+
+
+
 ### Compromis entre biais et variance
 
 Un modèle est très dépendant du dataset d'entrainement. On le voit très bien avec l'algorithme KNN avec k = 1: l'algorithme sera parfait pour les données d'entrainement mais beaucoup moins pour les données de test!  
