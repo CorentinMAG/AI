@@ -9,7 +9,7 @@ Les différentes étapes :
 5. Evaluer et interpréter les données, on évalue la qualité du modèle, s'il est pertinent
 6. Mettre le système en production
 
-## Le machine learning
+### Le machine learning
 
 Pour qu'un programme puisse exécuter une tâche pour laquelle il n'est pas programmé explicitement, il faut:
 * des données relatives à ladite tâche. Ce sont les exemples que l'on va fournir à l'algorithme pour qu'il puisse apprendre et devenir plus performant
@@ -17,7 +17,7 @@ Pour qu'un programme puisse exécuter une tâche pour laquelle il n'est pas prog
 * mesurer la performance de l'algorithme
 * c'est l'apprentissage, qui va permettre de construire le modèle.
 
-## Choisir ses données
+### Choisir ses données
 
 Il faut utiliser le jeu de données (dataset) à notre disposition à bon escient.
 Une bonne pratique est de séparer notre dataset en 3 paquets:
@@ -31,7 +31,7 @@ Une bonne pratique est de séparer notre dataset en 3 paquets:
 
 **Apprentissage supervisé**
 
-> :information_source: On possède des données déjà classés/connues/étiquettés servant de base à la prédiction
+> :information_source: On possède des données déjà classés/connues/étiquettés servant de base à la prédiction. Le but est de minimiser l'erreur entre la réponse de la machine et la réponse attendu (donnée par les données d'entrée).
 
 Permet de répondre à des problématiques de classifications et de régressions.
 
@@ -41,11 +41,17 @@ L'idée consiste donc à associer un label à des données sur lesquelles on a d
 * si les labels sont discrets on parle de classifications
 * si les labels sont continus on parle de regression
 
+Les étapes :
+1.dataset (y:target, x:features)
+2.modèle (régression linéaire,logistique...)
+3.fonction de coût (l'erreur quadratique moyenne)
+4.algorithme de minimisation de la fonction de coût
+
 > :information_source: Ici, la notion principale est celle de perte d'information (loss) dû à l'approximation de la réalité (notre modèle perd de l'information par rapport à la réalité observée à travers les données d'exemple). L'apprentissage se résume à minimiser cette fonction de perte afin que notre modèle soit le meilleur possible.
 
 **Apprentissage non supervisé**
 
-> :information_source: On ne possède pas de données déjà classés/connues servant de base à la prédiction
+> :information_source: On ne possède pas de données déjà classés/connues servant de base à la prédiction. Le but est que notre programme puisse reconnaitre des structures (des différences/ressemblances) dans les exemples qu'on lui montre
 
 Le système va devoir détecter les similarités dans les données qu'il reçoit et les organiser en fonction de ces dernières.
 On doit:
@@ -57,7 +63,7 @@ On doit:
 > :information_source: Le but est d'apprendre, à partir d'expériences successives, ce qu'il convient de faire de façon à trouver la meilleure solution. On laisse l'algorithme apprendre de ses propres erreurs
 
 Le procédé est intéractif et itératif. La machine fait face à un problème, elle observe son environnement, choisit une solution parmi plusieurs possibles, observe la réaction de l'environnement et adapte son comportement pour la prochaine itération afin de trouver la meilleure stratégie.
-L'IA est donc confronté à des choix. Si elle se trompe, elle est pénalisée sinon elle est récompensée. Afin d'obtenir toujours plus de récompenses, l'IA va faire de son mieux pour obtimiser sa prise de descisions.
+L'IA est donc confronté à des choix. Si elle se trompe, elle est pénalisée sinon elle est récompensée. Afin d'obtenir toujours plus de récompenses, l'IA va faire de son mieux pour obtimiser sa prise de descision.
 Le développeur se contente de fixer les règles qui détermine si l'IA sera récompensée ou punie.
 
 **Apprentissage par transfert**
@@ -78,10 +84,10 @@ Chacun de ces types d'apprentissages peut s'appuyer sur différents algorithmes.
 Il faut déterminer une équation de droite/plan qui se rapproche au plus près de l'ensemble de points étudiés.
 [La méthode des moindres carrés](https://eli.thegreenplace.net/2014/derivation-of-the-normal-equation-for-linear-regression) nous donne l'estimateur qui minnimise les erreurs: (X<sup>t<sup>X)<sup>-1</sup>X<sup>t<sup>Y
   
-  **KNN (K-nearest-neighbors)**
+**KNN (K-nearest-neighbors)**
   
-  > :information_source: algorithme d'apprentissage supervisée. Recherche des k plus proches voisins entre la donnée à prédire et les données connus. Cet algorithme est non paramétrique, il se base uniquement sur les données d'entrainement.
-  > :warning: pour que cette algorithme fonctionne, il faut que le nombre de paramètres soit petit
+> :information_source: algorithme d'apprentissage supervisée. Recherche des k plus proches voisins entre la donnée à prédire et les données connus. Cet algorithme est non paramétrique, il se base uniquement sur les données d'entrainement.
+> :warning: pour que cette algorithme fonctionne, il faut que le nombre de paramètres soit petit
   
 On dispose d'une base de données d'apprentissage constituée de N couples 'entrée-sortie'. Pour estimer la sortie associée à une nouvelle entrée x, on prend en compte les k échantillons d'appprentissage dont l'entrée est la plus proche de la nouvelle entrée x, selon une distance à définir. Le type de la sortie associé à x sera alors le type de sortie le plus représenté parmi les k échantillons.
 
@@ -89,7 +95,9 @@ k est ce qu'on appelle un hyperparamètre, c'est à dire que ce n'est pas un par
 
 [Plus d'information](https://cache.media.eduscol.education.fr/file/NSI/76/6/RA_Lycee_G_NSI_algo_knn_1170766.pdf)
 
-## Compromis entre biais et variance
+**Descente de gradient**
+
+### Compromis entre biais et variance
 
 Un modèle est très dépendant du dataset d'entrainement. On le voit très bien avec l'algorithme KNN avec k = 1: l'algorithme sera parfait pour les données d'entrainement mais beaucoup moins pour les données de test!  
 Comme on ne veut pas de cette variabilité, on va faire en sorte que la variabilité vis à vis du dataset d'entrainement diminue. Pour ça, dans le cas de KNN, on va augmenter k.  
@@ -102,7 +110,7 @@ Il faut trouver un bon compromis entre variance forte et biais élevé (bias-var
 2. utiliser des méthodes ensemblistes (il existe toute une famille d'algorithme appelés les méthodes d'ensembles qui se basent sur la combinaison de plusieurs modèles à haute variance et les agrègent (p. ex. en les moyennant) pour réduire la variance finale)
 3. Sélectionner et entrainer le bon modèle
 
-## surapprentissage et sousapprentissage
+### surapprentissage et sousapprentissage
 
 Le surapprentissage désigne le fais que le modèle choisi est trop collé au dataset d'apprentissage. C'est un problème qui survient quand la complexité du modèle est trop élevée, et il prend en compte du "bruit" non représentatif du modèle sous-jacent. C'est ce qui arrive aux modèles avec une haute variance.
 
@@ -119,14 +127,14 @@ Compromis entre biais et variance | erreur test vs entrainement | surapprentissa
 :--------------------------------:|:---------------------------:|:------------------------------------:
 ![biais_variance](./.github/biais_variance.PNG) | ![test_vs_train](./.github/training_vs_test_error.PNG) | ![overlifting_underlifting](./.github/overlifting_underlifting.PNG)
 
-## Problème de dimension
+### Problème de dimension
 
 Pour un nombre de paramètre donné, plus la dimension de l'espace augmente et plus il faudra de données d'entrainement pour notre modèle. C'est ce qu'on appele le phénomène de curse of dimensionality qui se visualise très bien avec l'alorithme KNN.
 
 Notre modèle doit donc être assez contraint pour pouvoir supporter les variations dimensionnelles sans augmenter en complexité.
 
 
-## Evaluer les performances d'un modèle
+### Evaluer les performances d'un modèle
 
 On a vu qu'il fallait couper notre jeu de données en au moins deux parties : 
 * un dataset pour l'entrainement
