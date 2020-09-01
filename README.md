@@ -25,7 +25,8 @@ Une bonne pratique est de séparer notre dataset en 3 paquets:
 * le dataset de test, qui servira à mesurer l'erreur (et donc la performance) du modèle sur des données qu'il n'a jamais vues. L'algorithme ne sera donc pas entrainé avec ces données.
 * le dataset de validation, qui servira à valider ou non notre modèle en mesurant l'erreur de prédiction (lors d'une validation croisée)
 
-> :information_source: En général, on sépare les données suivant la proportion 80:20
+
+> :information_source: En général, on sépare les données suivant la proportion 80:20. Il est aussi commun de standerdiser les données.
 
 ### Les différents types d'apprentissages
 
