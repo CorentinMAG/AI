@@ -174,6 +174,17 @@ A la fin, chaque donnée a servit 1 fois dans le dataset de test et k-1 fois dan
 
 La stratification consiste à faire des folds les plus variés possibles, afin que chaque fold puisse contenir un maximimum d'informations différentes.
 
+### Comment coder
+
+On code généralement en python puisque c'est le langage qui possède le plus de librairies pour la data science
+Les librairies les plus utilisées sont:
+* numpy
+* pandas
+* matplotlib
+* sklearn
+* tensorflow
+* seaborn
+
 ### Plus d'info
 
 
