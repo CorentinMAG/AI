@@ -97,6 +97,15 @@ k est ce qu'on appelle un hyperparamètre, c'est à dire que ce n'est pas un par
 
 **Descente de gradient**
 
+> :information source: algorithme d'optimisation pour l'apprentissage supervisée qui permet de trouver le minimum de la fonction de coût qui est convexe
+
+La fonction de coût est convexe, elle admet donc un minimum.
+
+[gradient](./github/gradient.PNG) | 
+:---------------------------------:
+alpha est le learning rate
+J est la fonction de coût
+
 ### Compromis entre biais et variance
 
 Un modèle est très dépendant du dataset d'entrainement. On le voit très bien avec l'algorithme KNN avec k = 1: l'algorithme sera parfait pour les données d'entrainement mais beaucoup moins pour les données de test!  
