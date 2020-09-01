@@ -93,6 +93,7 @@ Lorsqu'il y a plusieurs paramètres, que le modèle qui rassemble le plus au don
 **KNN (K-nearest-neighbors)**
   
 > :information_source: algorithme d'apprentissage supervisée. Recherche des k plus proches voisins entre la donnée à prédire et les données connus. Cet algorithme est non paramétrique, il se base uniquement sur les données d'entrainement.
+
 > :warning: pour que cette algorithme fonctionne, il faut que le nombre de paramètres soit petit
   
 On dispose d'une base de données d'apprentissage constituée de N couples 'entrée-sortie'. Pour estimer la sortie associée à une nouvelle entrée x, on prend en compte les k échantillons d'appprentissage dont l'entrée est la plus proche de la nouvelle entrée x, selon une distance à définir. Le type de la sortie associé à x sera alors le type de sortie le plus représenté parmi les k échantillons.
