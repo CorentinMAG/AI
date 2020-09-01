@@ -104,7 +104,7 @@ La fonction de coût est convexe, elle admet donc un minimum.
 
 ![gradient](./.github/gradient.PNG) | ![gradient](./.github/gradient_above.PNG)
 :----------------------------------:|:----------------------------------------:
-alpha est le learning rate          | la fonction de coût dépend en réalité de plusieurs paramètres (ici a et b)
+alpha est le learning rate          | la fonction de coût dépend en réalité de plusieurs paramètres (ici a et b) ce qui donne l'image ci dessus vu de en haut
 
 ### Compromis entre biais et variance
 
