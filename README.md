@@ -102,10 +102,7 @@ k est ce qu'on appelle un hyperparamètre, c'est à dire que ce n'est pas un par
 La fonction de coût est convexe, elle admet donc un minimum.
 
 
-[gradient](./github/gradient.PNG) | erreur test vs entrainement | surapprentissage vs sousapprentissage |
-:--------------------------------:|:---------------------------:|:------------------------------------:
-alpha est le learning rate
-J est la fonction de coût  | ![test_vs_train](./.github/training_vs_test_error.PNG) | ![overlifting_underlifting](./.github/overlifting_underlifting.PNG)
+[gradient](./github/gradient.PNG)   | alpha est le learning rate et J est la fonction de coût
 
 ### Compromis entre biais et variance
 
