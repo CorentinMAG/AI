@@ -102,7 +102,9 @@ k est ce qu'on appelle un hyperparamètre, c'est à dire que ce n'est pas un par
 La fonction de coût est convexe, elle admet donc un minimum.
 
 
-[gradient](./.github/gradient.PNG)
+![gradient](./.github/gradient.PNG) |
+:-----------------------------------:
+alpha est le learning rate          |
 
 ### Compromis entre biais et variance
 
