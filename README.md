@@ -82,7 +82,8 @@ Chacun de ces types d'apprentissages peut s'appuyer sur différents algorithmes.
 > :information_source: algorithme d'apprentissage supervisée. A partir d'une variable cible, le modèle à pour but de faire une prédiction grâce à des variables dites explicatives
 
 Il faut déterminer une équation de droite/plan qui se rapproche au plus près de l'ensemble de points étudiés.
-[La méthode des moindres carrés](https://eli.thegreenplace.net/2014/derivation-of-the-normal-equation-for-linear-regression) nous donne l'estimateur qui minimise les erreurs: (X<sup>t<sup>X)<sup>-1</sup>X<sup>t<sup>Y (on peut aussi utiliser la descente du gradient qui est plus commune)
+[La méthode des moindres carrés](https://eli.thegreenplace.net/2014/derivation-of-the-normal-equation-for-linear-regression) nous donne l'estimateur qui minimise les erreurs: (X<sup>t<sup>X)<sup>-1</sup>X<sup>t<sup>Y 
+La méthode de descente du gradient est quand même plus commune (car ne demande pas de calculer l'inverse de matrice)
 
 ![gradient](./.github/reg_line.PNG)
   
