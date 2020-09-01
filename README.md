@@ -86,7 +86,7 @@ Il faut déterminer une équation de droite/plan qui se rapproche au plus près 
 
 La méthode de descente du gradient est quand même plus commune (car ne demande pas de calculer l'inverse de matrice)
 
-![gradient](./.github/reg_line.PNG)
+![gradient](./.github/reg_line.PNG =100*100)
 
 Lorsqu'il y a plusieurs paramètres, que le modèle qui rassemble le plus au données n'est plus une droite mais un polynôme, on parle de régression linéaire multiple. Le principe est de convertir les équations en matrices afin de simplifier le problème.
   
