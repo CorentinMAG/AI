@@ -42,10 +42,11 @@ L'idée consiste donc à associer un label à des données sur lesquelles on a d
 * si les labels sont continus on parle de regression
 
 Les étapes :
+
 1.dataset (y:target, x:features)
 2.modèle (régression linéaire,logistique...)
 3.fonction de coût (l'erreur quadratique moyenne)
-4.algorithme de minimisation de la fonction de coût
+4.algorithme de minimisation de la fonction de coût (moindres carrées, descente du gradient...)
 
 > :information_source: Ici, la notion principale est celle de perte d'information (loss) dû à l'approximation de la réalité (notre modèle perd de l'information par rapport à la réalité observée à travers les données d'exemple). L'apprentissage se résume à minimiser cette fonction de perte afin que notre modèle soit le meilleur possible.
 
