@@ -170,6 +170,14 @@ A la fin, chaque donnée a servit 1 fois dans le dataset de test et k-1 fois dan
 
 La stratification consiste à faire des folds les plus variés possibles, afin que chaque fold puisse contenir un maximimum d'informations différentes.
 
+### Plus d'info
+
+
+[machine learnia](https://machinelearnia.com/)
+[makina](https://makina-corpus.com/blog/metier/2017/initiation-au-machine-learning-avec-python-pratique)
+[reseau de neurone](https://www.math.univ-toulouse.fr/~besse/Wikistat/pdf/st-m-app-rn.pdf)
+[openclassroom](https://openclassrooms.com/fr/courses/4011851-initiez-vous-au-machine-learning)
+[github](https://github.com/loveunk/Deep-learning-books)
 
 
 
