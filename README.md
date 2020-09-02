@@ -196,6 +196,7 @@ Les librairies les plus utilisées sont:
 * [reseau de neurone](https://www.math.univ-toulouse.fr/~besse/Wikistat/pdf/st-m-app-rn.pdf)
 * [openclassroom](https://openclassrooms.com/fr/courses/4011851-initiez-vous-au-machine-learning)
 * [github](https://github.com/loveunk/Deep-learning-books)
+* [note machine learning et librairies](https://github.com/loveunk/machine-learning-deep-learning-notes) (en chinois mais avec chrome -> traduire en Fr)
 
 
 
