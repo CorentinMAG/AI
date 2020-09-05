@@ -23,10 +23,15 @@ Il faut utiliser le jeu de données (dataset) à notre disposition à bon escien
 Une bonne pratique est de séparer notre dataset en 3 paquets:
 * le dataset d'entrainement, qui sera uniquement utilisé pour entrainer l'algorithme (il faut s'assurer que l'échantillon soit bien représentatif de toutes les données, pour ça généralement on récupère aléatoirement des échantillons dans notre jeu de données)
 * le dataset de test, qui servira à mesurer l'erreur (et donc la performance) du modèle sur des données qu'il n'a jamais vues. L'algorithme ne sera donc pas entrainé avec ces données.
-* le dataset de validation, qui servira à valider ou non notre modèle en mesurant l'erreur de prédiction (lors d'une validation croisée)
+* le dataset de validation, qui servira à valider ou non notre modèle en mesurant l'erreur de prédiction (validation croisée)
+
+Alternativement, on peut séparer notre jeu de données en uniquement deux parties : 
+* jeu d'entrainement
+* jeu de test
+On sépare le jeu de données en un jeu d’entraînement et un jeu de test. On évalue chaque modèle en validation croisée sur le jeu d’entraînement pour choisir le meilleur, que l’on applique ensuite au jeu de test.
 
 
-> :information_source: En général, on sépare les données suivant la proportion 80:20. Il est aussi commun de standerdiser les données.
+> :information_source: En général, on sépare les données suivant la proportion 80:20. Il est aussi commun de standardiser les données.
 
 ### Les différents types d'apprentissages
 
@@ -103,9 +108,20 @@ k est ce qu'on appelle un hyperparamètre, c'est à dire que ce n'est pas un par
 
 [Plus d'information](https://cache.media.eduscol.education.fr/file/NSI/76/6/RA_Lycee_G_NSI_algo_knn_1170766.pdf)
 
+**K-means**
+
+> :information_source: algorithme d'apprentissage non supervisée. L'algorithme accepte un ensemble de données non étiqueté, puis regroupe les données en plusieurs groupes différents.
+
+Il s'agit d'un algorithme itératif. Supposons que nous voulons regrouper les données en n groupes. La méthode est la suivante:
+1. On sélectionne k points aléatoires, appelés centres de gravité du cluster
+2. Pour chaque donnée de l'ensemble de données, on calcule la distance par rapport aux k points centraux et on sélectionne le point central avec la distance la plus proche. On associe les données à ce point central. Tous les points associés au même point central sont regroupés
+3. On calcule la valeur moyenne de chaque groupe et on déplace le point central associé au groupe vers la position de la valeur moyenne
+
+On répète les étapes 2 et 3 jusqu'à ce que le point central ne change plus.
+
 **Descente de gradient**
 
-> :information source: algorithme d'optimisation pour l'apprentissage supervisée qui permet de trouver le minimum de la fonction de coût qui est convexe
+> :information_source: algorithme d'optimisation pour l'apprentissage supervisée qui permet de trouver le minimum de la fonction de coût qui est convexe
 
 La fonction de coût est convexe, elle admet donc un minimum.
 
@@ -176,6 +192,58 @@ Le principe consiste à découper le jeu de données en k parties (fold) à peu 
 A la fin, chaque donnée a servit 1 fois dans le dataset de test et k-1 fois dans le dataset d'entrainement.  
 
 La stratification consiste à faire des folds les plus variés possibles, afin que chaque fold puisse contenir un maximimum d'informations différentes.
+
+Généralement, on veut essayer plusieurs modèles pour choisir le plus performant, et ensuite donner sa performance.
+
+> :warning: il ne suffit pas de faire une validation croisée sur l'ensemble des données pour chaque modèle. Car on utiliserais alors des données de tests pour choisir le modèle (risque de surapprentissage).
+
+Pour faire ça correctement, il faut séparer notre jeu de données en 3 parties:
+* jeu d'entrainement -> sert à entrainer divers modèles
+* jeu de validation -> sert à sélectionner un modèle : on choisit celui qui a la meilleure performance sur ce jeu
+* jeu de test -> sert à estimer la performance de généraliation du modèle
+
+Alternativement, on peut ne créer que 2 parties:
+* jeu d'entrainement
+* jeu de test
+On évalue chaque modèle en validation croisée sur le jeu d’entraînement pour choisir le meilleur, que l’on applique ensuite au jeu de test.
+
+Dans un problème de classification (renvoie des valeurs binaires), on utilise le nombre d'erreurs comme mesure de performance. Mais toutes les erreurs ne se valent pas.  
+On peut tracer une matrice de confusion. 
+Pour chaque classe, indique le nombre de vrais positif (TP), faux positifs (FP) ainsi que vrais négatifs (TN) et les faux négatifs (FN)
+
+* La sensibilité (sensitivity) = TP/TP+FN est le taux de vrais positifs.
+* La précision = TP/TP+FP est la proportion de prédictions correctes parmi les points que l'on a prédits positifs.
+* La moyenne est la F-mesure = 2*TP/(2*TP+FP+FN)
+* la spécificité = TN/FP+TN  est le taux de vrais négatifs
+* antispécificité = FP/FP+TN est le taux de faux positifs
+
+Cependant la plupart des algorithme retournent un nombre réel (proportion,...). Dans ce cas, pour retourner une valeur binaire, il faut seuiller: si le score retourné est supérieur au seuil alors on prédit positif sinon négatif.  
+
+cas | si réponse + | si réponse - |
+:--:|:------------:|:-------------:
+x>=S| TP|FP
+x<S|FN|TN
+
+### Courbe d'apprentissage
+
+> :information_source: L'erreur est la fonction de coût  
+
+La courbe d'apprentissage est un graphique avec l'erreur d'apprentissage et l'erreur de validation en fonction du nombre d'échantillon de l'ensemble de jeu.
+
+<img src='./.github/courbe_apprentissage.PNG' alt='gradient' width=400/>
+
+Ici par example, on voit que augmenter la taille du jeu d'entrainement n'est pas utile (car ne permettra pas de diminuer l'erreur)
+
+
+### Conception de systèmes
+
+* commencer par un modèle simple, avoir des résultats rapidement même s'ils ne sont pas très bons
+* implémenter l'algorithme et le tester avec les données de validation
+* courbe d'apprentissage, on découvre si l'algorithme à des problèmes (biais,variance...)
+* analyse des erreurs : ajouter plus de variables, augmenter le jeu de données ?
+* retester, changer de modèle pour l'améliorer ....
+
+> :information_source: il existe une hypothèse comme quoi, la personne qui réussit n'est pas la personne avec le meilleure algorithme, mais la personne avec le plus de données
 
 ### Comment coder
 
