@@ -217,7 +217,7 @@ Pour chaque classe, indique le nombre de vrais positif (TP), faux positifs (FP) 
 * la spécificité = TN/FP+TN  est le taux de vrais négatifs
 * antispécificité = FP/FP+TN est le taux de faux positifs
 
-Cependant la plupart des algorithme retournent un nombre réel (proportion,...). Dans ce cas, pour retourner une valeur binaire, il faut seuiller: si le score retourné est supérieur au seuil alors on prédit positif sinon négatif.  
+Cependant la plupart des algorithme retournent un nombre réel (ils peuvent souvent être interprétées comme la probabilité que le point appartiennent à la classe positive.). Dans ce cas, pour retourner une valeur binaire, il faut seuiller: si le score retourné est supérieur au seuil alors on prédit positif sinon négatif.  
 
 cas | si réponse + | si réponse - |
 :--:|:------------:|:-------------:
@@ -243,13 +243,23 @@ En effet, pour [0.95,0.51[, on a
 * TP = 1 (car 0.99 qui est au dessus du seuil est bien positif)
 * FP = 1 (car 0.95 qui est >= au seuil est négatif alors qu'il devrait être positif)
 
+On peut ensuite construire la courbe ROC (sensibilité en fonction de l'antispécificité)
+
+<img src='./.github/roc.PNG' alt='courbe roc' width=400/>
+
+Plus l'aire sous la courbe est grande, moins l'algorithme fait d'erreur.
+
+En plus de la courbe ROC, il existe:
+* PR curve (précision en fonction de la sensibilité)
+* fit curve (la sensibilité en fonction de la fraction du jeu de données parcourue)
+
 ### Courbe d'apprentissage
 
 > :information_source: L'erreur est la fonction de coût  
 
 La courbe d'apprentissage est un graphique avec l'erreur d'apprentissage et l'erreur de validation en fonction du nombre d'échantillon de l'ensemble de jeu.
 
-<img src='./.github/courbe_apprentissage.PNG' alt='gradient' width=400/>
+<img src='./.github/courbe_apprentissage.PNG' alt='courbe apprentissage' width=400/>
 
 Ici par example, on voit que augmenter la taille du jeu d'entrainement n'est pas utile (car ne permettra pas de diminuer l'erreur)
 
