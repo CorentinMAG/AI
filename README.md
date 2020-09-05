@@ -237,6 +237,11 @@ Seuil    |	1	|	[0.99,0.95[	|	[0.95,0.51[	|	[0.51,0.49[	|	[0.45,0.10[	|	[0.10,0.0
 TP/P     |   0 	|      1/3  	|      1/3	  	|      2/3  	|       1	 	|        1		  	| 1 |
 FP/P     |   0  |       0  		|      1/3		|      1/3		|      1/3		|       2/3			| 1 |
 
+En effet, pour [0.95,0.51[, on a 
+* TN = 2 (car en dessous du seuil, on est sensé avoir du négatif, ce qui est bien le cas pour 0.10 et 0.01)
+* FN = 1 (car 0.45 est positif alors qu'il devrait être négatif car en dessous du seuil)
+* TP = 1 (car 0.99 qui est au dessus du seuil est bien positif)
+* FP = 1 (car 0.95 qui est >= au seuil est négatif alors qu'il devrait être positif)
 
 ### Courbe d'apprentissage
 
