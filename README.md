@@ -219,6 +219,19 @@ Pour chaque classe, indique le nombre de vrais positif (TP), faux positifs (FP) 
 
 Cependant la plupart des algorithme retournent un nombre réel (ils peuvent souvent être interprétées comme la probabilité que le point appartiennent à la classe positive.). Dans ce cas, pour retourner une valeur binaire, il faut seuiller: si le score retourné est supérieur au seuil alors on prédit positif sinon négatif.  
 
+Pour un modèle de regression, ce n'est pas approprié de compter le nombre d'erreurs de prédiction que fait le modèle.  
+On utilise la fonction de coût 
+<img src='./.github/rmse.PNG' alt='rmse' width=400/>
+
+on peut aussi utilise le RMSLE, si les valeurs à prédire n'ont pas le même ordre de grandeur
+<img src='./.github/rmsle.PNG' alt='rmsle' width=400/>
+
+et enfin on peut calculer le coefficient de corrélation
+<img src='./.github/coeff_cor.PNG' alt='coeff_corr' width=400/>
+
+avec 
+<img src='./.github/rse.PNG' alt='rse' width=400/>
+
 cas | si réponse + | si réponse - |
 :--:|:------------:|:-------------:
 x>=S| TP|FP
