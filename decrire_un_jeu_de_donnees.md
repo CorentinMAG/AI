@@ -1,3 +1,5 @@
+# analyse univariée
+
 ## les types de variables
 
 **variables quantitatives**
