@@ -221,6 +221,7 @@ Cependant la plupart des algorithme retournent un nombre réel (ils peuvent souv
 
 Pour un modèle de regression, ce n'est pas approprié de compter le nombre d'erreurs de prédiction que fait le modèle.  
 On utilise la fonction de coût 
+
 <img src='./.github/rmse.PNG' alt='rmse' width=400/>
 
 on peut aussi utilise le RMSLE, si les valeurs à prédire n'ont pas le même ordre de grandeur
@@ -230,6 +231,7 @@ et enfin on peut calculer le coefficient de corrélation
 <img src='./.github/coeff_cor.PNG' alt='coeff_corr' width=400/>
 
 avec 
+
 <img src='./.github/rse.PNG' alt='rse' width=400/>
 
 cas | si réponse + | si réponse - |
