@@ -228,7 +228,7 @@ on peut aussi utilise le RMSLE, si les valeurs à prédire n'ont pas le même or
 <img src='./.github/rmsle.PNG' alt='rmsle' width=400/>
 
 et enfin on peut calculer le coefficient de corrélation
-<img src='./.github/coeff_cor.PNG' alt='coeff_corr' width=400/>
+<img src='./.github/coeff_corr.PNG' alt='coeff_corr' width=400/>
 
 avec 
 
