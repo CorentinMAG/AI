@@ -291,6 +291,8 @@ Ici par example, on voit que augmenter la taille du jeu d'entrainement n'est pas
 * analyse des erreurs : ajouter plus de variables, augmenter le jeu de données ?
 * retester, changer de modèle pour l'améliorer ....
 
+> :information_source: des approches naïves peuvent nous aider à mieux comprendre nos données et les performances de nos modèles
+
 > :information_source: il existe une hypothèse comme quoi, la personne qui réussit n'est pas la personne avec le meilleure algorithme, mais la personne avec le plus de données
 
 ### Comment coder
