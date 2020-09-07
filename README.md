@@ -225,7 +225,9 @@ On utilise la fonction de coût
 <img src='./.github/rmse.PNG' alt='rmse' width=200/>
 
 on peut aussi utilise le RMSLE, si les valeurs à prédire n'ont pas le même ordre de grandeur
+
 <img src='./.github/rmsle.PNG' alt='rmsle' width=300/>
+
 
 et enfin on peut calculer le coefficient de corrélation
 
