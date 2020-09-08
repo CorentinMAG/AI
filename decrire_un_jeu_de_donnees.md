@@ -155,7 +155,7 @@ Il est possible que 2 variables soient corrélées sans qu'il n'y ait aucun lien
 
 **2 variables quantitatives**
 
-__Graphique__:
+<ins>Graphique</ins>:
 
 On peut utiliser le scatter plot (diagramme de dispersion)
 
