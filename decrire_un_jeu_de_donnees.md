@@ -17,7 +17,7 @@ Une variable qualitative peut être nominale ou ordinale.
 * ordinale : les modalités peuvent être ordonnées
 * nominale : si la modalité n'est pas ordinale
 
-<img src='./.github/variables.PNG' alt='variables' width=100/>
+<img src='./.github/variables.PNG' alt='variables' width=400/>
 
 ## représenter la distribution d'une variable
 
