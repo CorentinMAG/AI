@@ -185,12 +185,12 @@ Si on avait trouvé un modèle parfait, alors il n'y aurait plus d'erreur, et do
 Ce pourcentage est calculé grâce à la formule de décomposition de la variance (analysis of variance, en anglais : ANOVA).
 
 
-<img src='./.github/anova.PNG' alt='anova' width=200/>
+<img src='./.github/anova.PNG' alt='anova' width=300/>
 
 SCT (Somme des Carrés Totale) traduit la variation totale de Y , SCE (Somme des Carrés Expliquée) traduit la variation expliquée par le modèle et SCR (Somme des Carrés Résiduelle) traduit la variation inexpliquée par le modèle.
 
 Pour la régression linéaire, le pourcentage de variation expliquée est donné par le coefficient de détermination noté R2 :
 
-<img src='./.github/r2.PNG' alt='r2' width=200/>
+<img src='./.github/r2.PNG' alt='r2' width=100/>
 
 C'est le coefficent de corrélation linéaire de Pearson.
