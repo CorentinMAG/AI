@@ -157,7 +157,40 @@ Il est possible que 2 variables soient corrélées sans qu'il n'y ait aucun lien
 
 <ins>Graphique</ins>:
 
-On peut utiliser le scatter plot (diagramme de dispersion)
+On peut utiliser le scatter plot (diagramme de dispersion). Mais pour avoir une représentation plus efficace, il est possible d'aggréger la variable X en abscisse en différentes classes. On représente ensuite une boxplot.
+
+<ins>indicateurs numériques</ins>:
+
+Il y a la covariance empirique de X et Y : 
+
+<img src='./.github/coeff_corelation.PNG' alt='coeff de correlation' width=200/>
+
+Si X et Y ne sont pas corrélés, alors la somme sera proche de 0.  
+Si X et Y sont corrélés et évoluent dans le même sens, on a donc que la quantité est positive.  
+En revanche, si X et Y évoluent l'un dans un sens, l'autre dans l'autre sens, il y a également corrélation : on parle de corrélation négative.
+
+Pour ramener la covariance empirique à une valeur qui soit comprise entre -1 et 1, alors on peut la diviser par le produit des écarts-types. Cette normalisation nous permet de faire des comparaisons.  
+On appelle ce coefficient le coefficient de corrélation de Pearson.  
+Ce coefficient ne détecte que les relations linéaires.
+
+<img src='./.github/pearson.PNG' alt='pearson' width=200/>
+
+**Analyser 2 variables quantitatives par regression linéaire**
 
 
+<img src='./.github/regression.PNG' alt='regression linéaire' width=200/>
 
+Si on avait trouvé un modèle parfait, alors il n'y aurait plus d'erreur, et donc plus de variations entre les valeurs prédites et les valeurs réelles. Dans ce cas, on dirait que le modèle a réussi à expliquer la totalité des variations. Les variations autour de la moyenne sont mesurées par la variance. Un modèle parfait aurait expliqué 100 % de la variation.
+
+Ce pourcentage est calculé grâce à la formule de décomposition de la variance (analysis of variance, en anglais : ANOVA).
+
+
+<img src='./.github/anova.PNG' alt='anova' width=200/>
+
+SCT (Somme des Carrés Totale) traduit la variation totale de Y , SCE (Somme des Carrés Expliquée) traduit la variation expliquée par le modèle et SCR (Somme des Carrés Résiduelle) traduit la variation inexpliquée par le modèle.
+
+Pour la régression linéaire, le pourcentage de variation expliquée est donné par le coefficient de détermination noté R2 :
+
+<img src='./.github/r2.PNG' alt='r2' width=200/>
+
+C'est le coefficent de corrélation linéaire de Pearson.
