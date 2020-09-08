@@ -17,6 +17,8 @@ Une variable qualitative peut être nominale ou ordinale.
 * ordinale : les modalités peuvent être ordonnées
 * nominale : si la modalité n'est pas ordinale
 
+<img src='./.github/variables.PNG' alt='variables' width=100/>
+
 ## représenter la distribution d'une variable
 
 Pour une variable qualitative, on peut utiliser le pie chart ou le bar chart  
@@ -194,3 +196,5 @@ Pour la régression linéaire, le pourcentage de variation expliquée est donné
 <img src='./.github/r2.PNG' alt='r2' width=100/>
 
 C'est le coefficent de corrélation linéaire de Pearson.
+
+## Analyser une variable quantitative et une variable qualitative par ANOVA
