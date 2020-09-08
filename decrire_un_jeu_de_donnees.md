@@ -145,3 +145,19 @@ Il existe également la moyenne géométrique, notamment utilisé dans les calcu
 Ainsi que la moyenne harmonique, notamment utilisée dans le calcul des moyennes de pourcentages et de rapports (si on veut trouver le bon compromis entre 2 variables par exemple).
 
 <img src='./.github/moyenne_harmonique.PNG' alt='moyenne harmonique' width=200/>
+
+# Analyse bivariée
+
+C'est étudier les relations entre les variables (corrélation).  
+Il est possible que 2 variables soient corrélées sans qu'il n'y ait aucun lien entre elles.
+
+## Représentation des données
+
+**2 variables quantitatives**
+
+__Graphique__:
+
+On peut utiliser le scatter plot (diagramme de dispersion)
+
+
+
