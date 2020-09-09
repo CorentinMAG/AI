@@ -153,9 +153,7 @@ Ainsi que la moyenne harmonique, notamment utilisée dans le calcul des moyennes
 C'est étudier les relations entre les variables (corrélation).  
 Il est possible que 2 variables soient corrélées sans qu'il n'y ait aucun lien entre elles.
 
-## Représentation des données
-
-**2 variables quantitatives**
+## Analyser 2 variables quantitatives par regression linéaire
 
 <ins>Graphique</ins>:
 
@@ -177,8 +175,7 @@ Ce coefficient ne détecte que les relations linéaires.
 
 <img src='./.github/pearson.PNG' alt='pearson' width=200/>
 
-**Analyser 2 variables quantitatives par regression linéaire**
-
+<ins>model</ins>:
 
 <img src='./.github/regression.PNG' alt='regression linéaire' width=200/>
 
@@ -198,3 +195,74 @@ Pour la régression linéaire, le pourcentage de variation expliquée est donné
 C'est le coefficent de corrélation linéaire de Pearson.
 
 ## Analyser une variable quantitative et une variable qualitative par ANOVA
+
+<ins>Graohique</ins>:
+
+On utilise des boxplots
+
+<ins>model</ins>:
+
+Reprendre la formule de la regression linéaire ( y = aX+b ) n'a pas de sens ici car X est une variable qualitative.  
+L'ANOVA est un outil de modélisation d'une variable Y quantitative par une/plusieurs variables X qualitatives.  
+
+<img src='./.github/anova_model.PNG' alt='anova model' width=200/>
+
+avec μ la moyenne d'une modalité de référence
+et αi l'écart de la modalité du point considéré
+
+<img src='./.github/anova1.PNG' alt='anova model1' width=200/>
+
+Si on veut connaitre le salaire moyen des habitants de pluton, on prend comme référence la moyenne de salire de la terre auquel on rajoute l'écart entre la moyenne terre-pluton et on rajoute le résidut (valeurs que le modèle n'a pas pu capturer) c'est à dire la distances entre les points et la moyenne de pluton.
+
+<img src='./.github/anova2.PNG' alt='anova model2' width=200/>
+
+Si la variance intergroupe est grande devant les variances intragroupe, alors plus l'effet des sauces est importantes.
+
+On peut calculer le rapport de corrélation  
+
+<img src='./.github/anova_corr.PNG' alt='anova corrélation' width=200/>
+
+Si le facteur est égal à 0, les moyennes des classes sont toutes égales, il n'y a pas de relation entre X et Y.
+
+## Analyser deux variables qualitatives avec le Chi-2
+
+On peut commencer par faire un tableau : 
+* on compte le nombe de fois ou une modalité apparait, c'est l'effectif de la modalité
+* on divise cet effectif par la taille de l'échantillon , c'est la fréquence d'apparition
+
+Ensuite on peut faire le tableau de contingence : 
+
+<img src='./.github/tableau_contingence.PNG' alt='tableau de contingence' width=200/>
+
+Si deux événements I et J sont indépendants, alors on s'attend à ce que le nombre d'individus qui satisfont à la fois I et J (appelons ce nombre nij ) soit égal à fi×nj. Au contraire, plus nij sera différent de fi×nj , plus on aura de raison de penser que I et J ne sont pas indépendants.
+
+Etudier une corrélation entre deux variables qualitatives revient donc à comparer les  nij  avec les fi×nj.
+
+<img src='./.github/khi_deux1.PNG' alt='khi deux1' width=200/>
+
+Et en sommant :
+
+<img src='./.github/khi_deux.PNG' alt='khi deux' width=200/>
+
+Plus ce facteur est grand, plus l'hyphothèse d'indépendance est valide.
+
+# Nettoyage des données
+
+<ins>traiter les valeurs manquantes, les outliers et les doublons</ins>:
+
+<ins>valeurs manquantes (imputation)</ins>
+
+Essayer de deviner une valeur manquante s'appelle l'imputation.  
+* on peut remplacer les valeurs d'une variable par la moyenne de cette variable.
+* pour remplacer une variable donnée, on peut regarder les variables aux alentours (hot-deck, regressions linéaires)
+
+**Regarder la distribution de la variable (au moins les quantile) avant et après l'imputation, pour voir si sa forme n'a pas été impactée**
+
+<ins>outliers</ins>
+
+La moyenne est très sensible aux outliers alors que la médiane non.  
+* supprimer la valeur
+* conserver la valeur
+
+
+
