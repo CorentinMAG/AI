@@ -28,6 +28,7 @@ Une bonne pratique est de séparer notre dataset en 3 paquets:
 Alternativement, on peut séparer notre jeu de données en uniquement deux parties : 
 * jeu d'entrainement
 * jeu de test
+
 On sépare le jeu de données en un jeu d’entraînement et un jeu de test. On évalue chaque modèle en validation croisée sur le jeu d’entraînement pour choisir le meilleur, que l’on applique ensuite au jeu de test.
 
 
@@ -61,7 +62,7 @@ Les étapes :
 
 Le système va devoir détecter les similarités dans les données qu'il reçoit et les organiser en fonction de ces dernières.
 On doit:
-1. classer les donner : comme on n'a pas encore les labels/étiquettes, on parle de clustering
+1. classer les données : comme on n'a pas encore les labels/étiquettes, on parle de clustering
 2. diminuer le nombre de dimensions de nos données (car souvent on dispose de beaucoup de paramètres), tout en conservant l'essentiel de l'information
 
 **Apprentissage par renforcement**
