@@ -282,7 +282,7 @@ La courbe d'apprentissage est un graphique avec l'erreur d'apprentissage et l'er
 
 <img src='./.github/courbe_apprentissage.PNG' alt='courbe apprentissage' width=400/>
 
-Ici par example, on voit que augmenter la taille du jeu d'entrainement n'est pas utile (car ne permettra pas de diminuer l'erreur)
+Ici par exemple, on voit qu'augmenter la taille du jeu d'entrainement n'est pas utile (car ne permettra pas de diminuer l'erreur)
 
 
 ### Conception de systèmes
