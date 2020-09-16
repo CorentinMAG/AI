@@ -214,7 +214,7 @@ et αi l'écart de la modalité du point considéré
 
 <img src='./.github/anova1.PNG' alt='anova model1' width=400/>
 
-Si on veut connaitre le salaire moyen des habitants de pluton, on prend comme référence la moyenne de salire de la terre auquel on rajoute l'écart entre la moyenne terre-pluton et on rajoute le résidut (valeurs que le modèle n'a pas pu capturer) c'est à dire la distances entre les points et la moyenne de pluton.
+Si on veut connaitre le salaire moyen des habitants de pluton, on prend comme référence la moyenne de salaire de la terre auquel on rajoute l'écart entre la moyenne terre-pluton et on rajoute le résidut (valeurs que le modèle n'a pas pu capturer) c'est à dire la distances entre les points et la moyenne de pluton.
 
 <img src='./.github/anova2.PNG' alt='anova model2' width=400/>
 
