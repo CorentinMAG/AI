@@ -23,7 +23,7 @@ Une variable qualitative peut être nominale ou ordinale.
 
 Pour une variable qualitative, on peut utiliser le pie chart ou le bar chart  
 Pour une variable quantitative :
-* discrète : diagramme en bâtons (bar chart mais placement précis d'un axe x)
+* discrète : diagramme en bâtons (comme un bar chart mais placement précis d'un axe x)
 * continues : on aggrège les valeurs en classes (discrétise), histogramme ou alors on ne discrétise pas et on utilise la fonction de répartition empirique
 
 ## représenter sous forme d'un tableau
@@ -50,13 +50,15 @@ C'est la valeur telle que le nombre d’observations supérieures à cette valeu
 
 ## les mesures de dispersion
 
-**la variace empirique**
+**la variance empirique**
 
 On prend toutes nos valeurs et on calcule pour chacune d'elles l'ecart qu'elles ont avec la moyenne 
 
 <img src='./.github/variance.PNG' alt='variance' width=200/>
 
-Cependant, la variance empirique est biaisé. On a donc créé la variance corrigée :
+Cependant, la variance empirique est biaisé.  
+En effet, nos données représentent un échantillon, on comprend très bien que la variance peut varier d'un échantillon à l'autre. Elle a de très faible chance de coïncider exactement avec la valeur qu'elle est censé représenter.
+On a donc créé la variance corrigée :
 
 <img src='./.github/variance_sans_biais.PNG' alt='variance sans biais' width=200/>
 
