@@ -186,7 +186,7 @@ Il ne faut jamais évaluer un modèle sur des points qui ont été utilisés pou
 
 Cependant, on utilise du coup qu'une partie de nos données pour entrainer l'algorithme, si le dataset de test est très facile/dificile à prédire, l'estimation de la performance sera biaisé.
 
-A la fin d'éviter ce problème, on utilise la validation croisée, qui va permettre d'utiliser l'intégralité de notre jeu de données pour l'entrainement et pour la validation.
+Afin d'éviter ce problème, on utilise la validation croisée, qui va permettre d'utiliser l'intégralité de notre jeu de données pour l'entrainement et pour la validation.
 
 Le principe consiste à découper le jeu de données en k parties (fold) à peu près égales. Tour à tour, chacune des k parties (souvent 5 ou 10) est utilisé comme un dataset de test. Le reste (les k-1 parties) est utilisé pour l'entrainement.
 
@@ -206,6 +206,7 @@ Pour faire ça correctement, il faut séparer notre jeu de données en 3 parties
 Alternativement, on peut ne créer que 2 parties:
 * jeu d'entrainement
 * jeu de test
+
 On évalue chaque modèle en validation croisée sur le jeu d’entraînement pour choisir le meilleur, que l’on applique ensuite au jeu de test.
 
 Dans un problème de classification (renvoie des valeurs binaires), on utilise le nombre d'erreurs comme mesure de performance. Mais toutes les erreurs ne se valent pas.  
