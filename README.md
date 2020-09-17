@@ -56,7 +56,7 @@ Les étapes :
 
 > :information_source: Ici, la notion principale est celle de perte d'information (loss) dû à l'approximation de la réalité (notre modèle perd de l'information par rapport à la réalité observée à travers les données d'exemple). L'apprentissage se résume à minimiser cette fonction de perte afin que notre modèle soit le meilleur possible.
 
-> : information_source: Pour réduire l'erreur, une solution peut être de choisir une autre mesure de distance (au lieu de la distance euclidienne par exemple) ou jouer sur les hyperparamètres
+> : information_source: Pour réduire l'erreur, une solution peut être de choisir une autre mesure de distance (au lieu de la distance euclidienne par exemple, la relative entropie est beaucoup utilisée) ou jouer sur les hyperparamètres
 
 **Apprentissage non supervisé**
 
