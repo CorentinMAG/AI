@@ -12,7 +12,7 @@ Les différentes étapes :
 ### Le machine learning
 
 Pour qu'un programme puisse exécuter une tâche pour laquelle il n'est pas programmé explicitement, il faut:
-* des données relatives à ladite tâche. Ce sont les exemples que l'on va fournir à l'algorithme pour qu'il puisse apprendre et devenir plus performant
+* des données relatives à ladite tâche (attention aux données qui ne sont pas pertinentes qui peuvent perturber le modèle). Ce sont les exemples que l'on va fournir à l'algorithme pour qu'il puisse apprendre et devenir plus performant
 * un algorithme, son objectif est de transformer nos données en un modèle
 * mesurer la performance de l'algorithme
 * c'est l'apprentissage, qui va permettre de construire le modèle.
@@ -55,6 +55,8 @@ Les étapes :
 4. algorithme de minimisation de la fonction de coût (moindres carrées, descente du gradient...)
 
 > :information_source: Ici, la notion principale est celle de perte d'information (loss) dû à l'approximation de la réalité (notre modèle perd de l'information par rapport à la réalité observée à travers les données d'exemple). L'apprentissage se résume à minimiser cette fonction de perte afin que notre modèle soit le meilleur possible.
+
+> : information_source: Pour réduire l'erreur, une solution peut être de choisir une autre mesure de distance (au lieu de la distance euclidienne par exemple) ou jouer sur les hyperparamètres
 
 **Apprentissage non supervisé**
 
