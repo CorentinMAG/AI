@@ -39,7 +39,7 @@ Après avoir centré les données, si on les divise par leur écart-type, alors 
 
 Pour étudier la variabilité, on trace un nuage de point des individus.  
 
-<img src='./.github/corr_variable.PNG' alt='correlation' width=200/>
+<img src='./.github/corr_variable.PNG' alt='correlation' width=300/>
 
 Pour étudier les liaisons entre les variables, c'est l'inverse. Chaque ligne correspond à une dimension et chaque colonne à un point. ( généralement on trace un vecteur entre l'origine du repère et le point en question )  
 On représente un nuage de variable dans l'espace des valeurs.  
@@ -47,7 +47,7 @@ L'angle entre 2 variables est lié au coefficient de corrélation des 2 variable
 
 > :warning: Attention ! Il faut que les données soient centrées, ce qui est toujours le cas en ACP
 
-<img src='./.github/repr_variable_corr.PNG' alt='correlation & variables' width=100/>
+<img src='./.github/repr_variable_corr.PNG' alt='correlation & variables' width=300/>
 
 
 À ce stade, nous avons 2 espaces totalement différents : R<sup>p</sup> et R<sup>n</sup> . Le premier est à p dimensions et contient le nuage d’individus N<sub>I</sub> , et l’autre est à n dimensions et contient le nuage des variables N<sub>K</sub> .
@@ -59,7 +59,7 @@ Et bien, figurez-vous que, si l'on place ces nouvelles variables dans R<sup>n</s
 **Autrement dit, étudier les axes d’inertie des individus est équivalent à étudier les axes principaux d’inertie des variables ! En ACP, étudier les individus ou les variables c'est étudier deux facettes de la même chose**
 
 
-<img src='./.github/resume_acp.PNG' alt='résumé ACP' width=250/>
+<img src='./.github/resume_acp.PNG' alt='résumé ACP' width=300/>
 
 **cercle des corrélations**
 
